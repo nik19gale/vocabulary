@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PartController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\WordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('parts', PartController::class);
+Route::resource('tags', TagController::class);
+Route::resource('words', WordController::class);
